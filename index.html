@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VX años de Melannie</title>
+
+<style>
+
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+
+    body{
+        background:#F7D2D9;
+        font-family: Georgia, serif;
+    }
+
+    /* HERO */
+
+    .hero{
+        position:relative;
+        width:100%;
+    }
+
+    .hero img{
+        width:100%;
+        height:auto;
+        display:block;
+    }
+
+    /* Capa encima de la imagen */
+
+    .hero-overlay{
+        position:absolute;
+        inset:0;
+
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+
+        padding:5% 0 8%;
+    }
+
+    /* Nombre arriba */
+
+    .hero-header{
+        text-align:center;
+        padding:0 20px;
+    }
+
+    .hero-header h1{
+        color:white;
+
+        font-size:clamp(1.2rem, 2.5vw, 5rem);
+
+        font-weight:300;
+
+        text-shadow:
+            0 2px 8px rgba(0,0,0,.35);
+    }
+
+    /* Texto abajo */
+
+    .hero-footer{
+        text-align:center;
+        padding:0 20px;
+        color:white;
+    }
+
+    .hero-footer h2{
+        font-size:clamp(2rem, 5vw, 4rem);
+
+        margin-bottom:10px;
+
+        text-shadow:
+            0 2px 8px rgba(0,0,0,.35);
+    }
+
+    .hero-footer p{
+        font-size:clamp(2rem, 2.5vw, 1.6rem);
+
+        text-shadow:
+            0 2px 8px rgba(0,0,0,.35);
+    }
+
+    /* SIGUIENTE SECCIÓN */
+
+    .info{
+        padding:40px 20px;
+        text-align:center;
+        color:#7A1E48;
+        font-size:clamp(1.4rem, 2.5vw, 1.6rem);
+    }
+
+    .info h2{
+        margin-bottom:20px;
+    }
+
+    /* CUENTA REGRESIVA */
+
+.contador{
+    padding:20px 20px;
+    text-align:center;
+    color:#7A1E48;
+}
+
+.contador h2{
+    margin-bottom:40px;
+    font-size:clamp(2rem,4vw,3rem);
+}
+
+.countdown{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.tiempo{
+    background:white;
+    min-width:110px;
+    padding:20px 15px;
+    border-radius:20px;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,.08);
+}
+
+.tiempo span{
+    display:block;
+    font-size:clamp(2rem,5vw,3rem);
+    font-weight:bold;
+}
+
+.tiempo small{
+    font-size:1rem;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.separador{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:15px 0;
+}
+
+.separador img{
+    width:min(380px, 75%);
+    height:auto;
+    opacity:.7;
+}
+
+.galeria{
+    padding:20px 20px;
+    display:flex;
+    justify-content:center;
+}
+
+.marco-foto{
+    background:white;
+
+    padding:18px 18px 55px 18px;
+
+    max-width:500px;
+    width:90%;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.15);
+}
+
+.marco-foto img{
+    width:100%;
+    display:block;
+    border-radius:2px;
+}
+
+.ubicacion{
+    padding:40px 20px;
+    text-align:center;
+    color:#7A1E48;
+    font-size:clamp(1.4rem, 2.5vw, 1.6rem);
+
+}
+
+.ubicacion h2{
+    margin-bottom:20px;
+}
+
+.horario{
+    display:inline-block;
+
+    background:white;
+
+    border:2px solid #D8A7B1;
+
+    border-radius:30px;
+
+    padding:8px 25px;
+
+    margin:15px 0;
+
+    color:#7A1E48;
+
+    font-weight:bold;
+
+    box-shadow:
+        0 4px 10px rgba(0,0,0,.08);
+}
+
+.mapa{
+    max-width:800px;
+    margin:30px auto 0;
+}
+
+.mapa iframe{
+    width:100%;
+    aspect-ratio:16/9;
+    height:auto;
+    border:none;
+    border-radius:20px;
+}
+
+.despedida{
+    padding:20px 20px 150px;
+    text-align:center;
+}
+
+.despedida p{
+    color:#7A1E48;
+
+    font-style:italic;
+
+    font-size:clamp(1.8rem, 4vw, 3rem);
+
+    max-width:700px;
+
+    margin:auto;
+
+    line-height:1.5;
+}
+
+</style>
+
+</head>
+
+<body>
+
+    <section class="hero">
+
+        <img
+            src="1.jpeg"
+            alt="Portada de la invitación"
+        >
+
+        <div class="hero-overlay">
+
+            <div class="hero-header">
+                <h1>MELANNIE CRISTABELL VÁZQUEZ GONZÁLEZ</h1>
+            </div>
+
+            <div class="hero-footer">
+                <h2>Mis XV Años</h2>
+
+                <p>20 de Junio de 2026</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="separador">
+    <img src="divider.svg" alt="Separador ornamental">
+</div>
+
+    <section class="contador">
+
+    <h2>Faltan</h2>
+
+    <div class="countdown">
+
+        <div class="tiempo">
+            <span id="dias">0</span>
+            <small>Días</small>
+        </div>
+
+        <div class="tiempo">
+            <span id="horas">0</span>
+            <small>Horas</small>
+        </div>
+
+        <div class="tiempo">
+            <span id="minutos">0</span>
+            <small>Minutos</small>
+        </div>
+
+        <div class="tiempo">
+            <span id="segundos">0</span>
+            <small>Segundos</small>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="info">
+
+    <p>Con la bendición de Dios y el amor de su familia</p>
+        <br>
+        <h3>Melannie Cristabel Vázquez González</h3>
+        <br>
+        <p>tiene el honor de invitarles a la celebración de sus XV años</p>
+        <br>
+        <br>
+        <p>Acompañada por su padre,</p>
+        <br>
+        <h3>Eduardo Efrén Vázquez Díaz</h3>
+<br>
+        <p>y recordando con cariño la memoria de su amada madre, </p>
+        <br>
+        <h3>Cristabel González Rico</h3>
+        <br>
+        <p>agradece su presencia en esta fecha tan importante</p>
+    </section>
+
+    <div class="separador">
+    <img src="divider.svg" alt="Separador ornamental">
+</div>
+
+
+<section class="galeria">
+
+    <div class="marco-foto">
+        <img src="2.jpeg" alt="Melannie">
+        
+    </div>
+
+</section>
+
+<div class="separador">
+    <img src="divider.svg" alt="Separador ornamental">
+</div>
+
+<section class="ubicacion">
+
+    <h2>Ceremonia Religiosa</h2>
+    <p>Parroquia de San Martin de Porres</p>
+    
+    <div class="horario">
+    6:30 PM
+</div>
+    <br>
+    <p>Calle Libertad No. 301 C.P 93220</p>
+    <p>Col. Manuel Avila Camacho, Poza Rica, Ver.</p>
+
+</section>
+
+<section class="ubicacion">
+
+    <h2>Recepción</h2>
+    <p>Salón Regio</p>
+    <div class="horario">
+    7:30 PM
+</div>
+    <br>
+    <p>Calle 12 No. 237-B C.P. 93230</p>
+    <p>Col. Cazones, Poza Rica, Ver.</p>
+
+    <div class="mapa">
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3736.163078762949!2d-97.45104738970358!3d20.540507404290917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85da6aaff8bd8731%3A0x4a0bb1590f161254!2sSal%C3%B3n%20Regio!5e0!3m2!1ses!2smx!4v1780287621318!5m2!1ses!2smx"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+    </div>
+
+</section>
+
+<div class="separador">
+    <img src="divider.svg" alt="Separador ornamental">
+</div>
+
+<section class="despedida">
+
+    <p>
+        Tu presencia será el mejor regalo para hacer de este día un recuerdo inolvidable
+    </p>
+
+</section>
+
+<audio id="musica" loop preload="auto">
+    <source src="golden.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+const fechaEvento = new Date("June 20, 2026 18:30:00").getTime();
+
+function actualizarContador(){
+
+    const ahora = new Date().getTime();
+
+    const diferencia = fechaEvento - ahora;
+
+    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+
+    const horas = Math.floor(
+        (diferencia % (1000 * 60 * 60 * 24))
+        / (1000 * 60 * 60)
+    );
+
+    const minutos = Math.floor(
+        (diferencia % (1000 * 60 * 60))
+        / (1000 * 60)
+    );
+
+    const segundos = Math.floor(
+        (diferencia % (1000 * 60))
+        / 1000
+    );
+
+    document.getElementById("dias").textContent = dias;
+    document.getElementById("horas").textContent = horas;
+    document.getElementById("minutos").textContent = minutos;
+    document.getElementById("segundos").textContent = segundos;
+}
+
+actualizarContador();
+
+setInterval(actualizarContador,1000);
+
+const audioInvitacion = document.getElementById("musica");
+
+function iniciarMusica() {
+
+    audioInvitacion.volume = 0.8;
+
+    audioInvitacion.play()
+        .catch(err => console.log("No se pudo reproducir:", err));
+
+    document.removeEventListener("click", iniciarMusica);
+    document.removeEventListener("touchstart", iniciarMusica);
+}
+
+document.addEventListener("click", iniciarMusica);
+document.addEventListener("touchstart", iniciarMusica);
+</script>
+
+</body>
+</html>
