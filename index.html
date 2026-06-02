@@ -19,6 +19,51 @@
         font-family: Georgia, serif;
     }
 
+    #pantallaInicio{
+    position:fixed;
+    inset:0;
+
+    background:#F7D2D9;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    z-index:99999;
+
+    transition:opacity .8s ease;
+}
+
+.contenidoInicio{
+    color:#7A1E48;
+    padding:20px;
+    width:100%;
+    max-width:90%;
+}
+
+.contenidoInicio h2{
+    font-size:clamp(1.8rem, 7vw, 3rem);
+    margin-bottom:20px;
+}
+
+.contenidoInicio h1{
+    font-size:clamp(1.5rem, 6vw, 2.5rem);
+    margin-bottom:30px;
+    line-height:1.2;
+}
+
+.contenidoInicio p{
+    font-size:clamp(1rem, 4vw, 1.3rem);
+}
+
+@keyframes parpadeo{
+    50%{
+        opacity:.4;
+    }
+}
+
     /* HERO */
 
     .hero{
@@ -251,6 +296,20 @@
 
 <body>
 
+    <div id="pantallaInicio">
+
+    <div class="contenidoInicio">
+
+        <h2>Mis XV Años</h2>
+
+        <h1>Melannie Cristabell</h1>
+
+        <p>Toca para abrir la invitación</p>
+
+    </div>
+
+</div>
+
     <section class="hero">
 
         <img
@@ -438,20 +497,32 @@ actualizarContador();
 setInterval(actualizarContador,1000);
 
 const audioInvitacion = document.getElementById("musica");
+const pantallaInicio = document.getElementById("pantallaInicio");
 
-function iniciarMusica() {
+pantallaInicio.addEventListener("click", async () => {
 
-    audioInvitacion.volume = 0.8;
+    try{
 
-    audioInvitacion.play()
-        .catch(err => console.log("No se pudo reproducir:", err));
+        audioInvitacion.volume = 0.5;
 
-    document.removeEventListener("click", iniciarMusica);
-    document.removeEventListener("touchstart", iniciarMusica);
-}
+        await audioInvitacion.play();
 
-document.addEventListener("click", iniciarMusica);
-document.addEventListener("touchstart", iniciarMusica);
+    }catch(error){
+
+        console.log(error);
+
+    }
+
+    pantallaInicio.style.opacity = "0";
+
+    setTimeout(() => {
+
+        pantallaInicio.style.display = "none";
+
+    }, 800);
+
+});
+
 </script>
 
 </body>
