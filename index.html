@@ -77,60 +77,31 @@
         display:block;
     }
 
-    /* Capa encima de la imagen */
+    .portada-texto{
+    text-align:center;
+    padding:45px 20px 25px;
+    color:#7A1E48;
+}
 
-    .hero-overlay{
-        position:absolute;
-        inset:0;
+.subtitulo-portada{
+    font-size:clamp(1.1rem, 3vw, 1.7rem);
+    letter-spacing:4px;
+    text-transform:uppercase;
+    margin-bottom:18px;
+}
 
-        display:flex;
-        flex-direction:column;
-        justify-content:space-between;
+.portada-texto h1{
+    font-size:clamp(2rem, 7vw, 4rem);
+    font-weight:300;
+    line-height:1.15;
+    margin-bottom:20px;
+}
 
-        padding:5% 0 8%;
-    }
-
-    /* Nombre arriba */
-
-    .hero-header{
-        text-align:center;
-        padding:0 20px;
-    }
-
-    .hero-header h1{
-        color:white;
-
-        font-size:clamp(1.2rem, 2.5vw, 5rem);
-
-        font-weight:300;
-
-        text-shadow:
-            0 2px 8px rgba(0,0,0,.35);
-    }
-
-    /* Texto abajo */
-
-    .hero-footer{
-        text-align:center;
-        padding:0 20px;
-        color:white;
-    }
-
-    .hero-footer h2{
-        font-size:clamp(2rem, 5vw, 4rem);
-
-        margin-bottom:10px;
-
-        text-shadow:
-            0 2px 8px rgba(0,0,0,.35);
-    }
-
-    .hero-footer p{
-        font-size:clamp(2rem, 2.5vw, 1.6rem);
-
-        text-shadow:
-            0 2px 8px rgba(0,0,0,.35);
-    }
+.fecha-portada{
+    font-size:clamp(1.2rem, 3.5vw, 1.8rem);
+    font-style:italic;
+    margin-top:10px;
+}
 
     /* SIGUIENTE SECCIÓN */
 
@@ -315,27 +286,26 @@
 </div>
 
     <section class="hero">
+    <img src="1.jpeg" alt="Portada de la invitación">
+</section>
 
-        <img
-            src="1.jpeg"
-            alt="Portada de la invitación"
-        >
+<section class="portada-texto">
 
-        <div class="hero-overlay">
+    <p class="subtitulo-portada">Mis XV Años</p>
 
-            <div class="hero-header">
-                <h1>MELANNIE CRISTABELL VÁZQUEZ GONZÁLEZ</h1>
-            </div>
+    <h1>
+        Melannie Cristabell
+        <br>
+        Vázquez González
+    </h1>
 
-            <div class="hero-footer">
-                <h2>Mis XV Años</h2>
+    <div class="separador">
+        <img src="divider.svg" alt="Separador ornamental">
+    </div>
 
-                <p>20 de Junio de 2026</p>
-            </div>
+    <p class="fecha-portada">20 de Junio de 2026</p>
 
-        </div>
-
-    </section>
+</section>
 
     <div class="separador">
     <img src="divider.svg" alt="Separador ornamental">
